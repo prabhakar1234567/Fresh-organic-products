@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    outline: none; border:none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+body{
+    background:#eee;
+}
+
+section{
+    padding:2rem 9%;
+}
+.heading{
+    text-align: center;
+    padding:2rem 0;
+    padding-bottom: 3rem;
+    font-size: 3.5rem;
+    color:var(--black);
+}
+.heading span{
+    background: var(--orange);
+    color:#fff;
+    display: inline-block;
+    padding:.5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border:.2rem solid var(--black);
+    color:var(--black);
+    cursor: pointer;
+    background: none;
+}
+
+.btn:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+.header{
+    position: fixed;
+    top:0; left:0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    background:#fff;
+    box-shadow: var(--box-shadow);
+}
+.header .logo{
+
+   
+    font-weight: bolder;
+    color:blue;
+    font-size: 2.5rem;
+}
+.header .logo span{
+    color:orangered;
+}
+
+
+
+.header .logo i{
+    color:var(--orange);
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 1rem;
+    color:var(--black);
+}
+
+.header .navbar a:hover{
+    color:var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background: #eee;
+    color:var(--black);
+    font-size: 2rem;
+    margin-left: .3rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header .icons div:hover{
+    background: var(--orange);
+    color:#fff;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.product-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: url(../image/banner-bg.webp) no-repeat; */
+    background-position: center;
+    background-size: cover;
+    padding-top:100px;
+    padding-bottom: 10rem;
+
+}
+.product{
+    height:500px;
+    width:200px;
+   
+
+}
+.product img{
+    height:400px;
+    width:500px;
+    margin-bottom: 10px;
+}
+.details{
+    padding:10px;
+    margin-left:250px;
+    width:500px;
+    height:500px;
+    padding-top:50px;
+    
+}
+.details h1 {
+    font-size: 25px;
+    color:orangered;
+    font-family:'Times New Roman', Times, serif
+}
+.details h2{
+    font-size: 23px;
+    color:green;
+}
+.details p{
+    font-size: 15px;
+   
+}
+button{
+    text-align: center;
+    border:2px solid black;
+    padding:4px;
+    align-items: center;
+    border-radius: 10px;
+    margin-left:150px;
+    width:150px;
+    margin-top:30px;
+    font-size: 18px;
+}
+button:hover{
+    background-color:orangered;
+    color:white;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+
+        <a href="" class="logo" >
+            <i class="fas fa-shopping-basket"></i>Achievers<span>IT</span></a>
+    
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#products">products</a>
+            <a href="#categories">categories</a>
+            <a href="#review">review</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+</header>
+ 
+  <section class="product-details">
+    <div class="product">
+        <img src="image/org3.jpg" alt=""/>
+
+    </div>
+    <div class="details">
+    <h1>ALL</h1>
+    <h1>PAYMENT OPTION</h1>
+    <h2>FRESH VEGETABLES AND FRUITS</h2>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem rerum aliquam corporis nesciunt at obcaecati modi, facilis, porro quis, provident eligendi deleniti fuga. Quidem ipsum, ratione fugiat suscipit perferendis deserunt, nostrum delectus dolores, corporis eveniet nisi aliquam error assumenda recusandae minima distinctio placeat unde asperiores voluptates architecto. Id cum adipisci saepe rem explicabo libero error, voluptate sed voluptates tenetur quae ducimus voluptatem dignissimos dolore mollitia ratione molestias a odit ipsam suscipit! Nisi sed harum non?</P>
+   <a href="index.html" >
+   <button>shop now</button></a>
+    </div>
+
+   
+    
+   
+
+  </section>
+</body>
+</html>
