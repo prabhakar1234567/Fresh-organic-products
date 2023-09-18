@@ -1,0 +1,21 @@
+pipeline{
+    agent any
+    
+    stages {
+        stage('git checkout') {
+            steps {
+                git credentialsId: 'github', url: 'https://github.com/prabhakar1234567/Fresh-organic-products.git'
+            }
+        }
+        stage('build code') {
+            steps {
+                sh "mvn clean package"
+            }
+            post {
+                success {
+                    archiveArtifacts artifacts: '*/**.war'
+                }
+            }
+        }
+    }
+}
